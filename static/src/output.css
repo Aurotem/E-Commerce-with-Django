@@ -1192,6 +1192,10 @@ input:checked + .toggle-bg {
   margin-bottom: 1.25rem;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .ms-2 {
   margin-inline-start: 0.5rem;
 }
@@ -1250,6 +1254,11 @@ input:checked + .toggle-bg {
 
 .hidden {
   display: none;
+}
+
+.size-auto {
+  width: auto;
+  height: auto;
 }
 
 .h-10 {
@@ -1635,6 +1644,18 @@ input:checked + .toggle-bg {
   background-color: rgb(255 255 255 / 0.5);
 }
 
+.fill-slate-300 {
+  fill: #cbd5e1;
+}
+
+.fill-slate-400 {
+  fill: #94a3b8;
+}
+
+.fill-slate-500 {
+  fill: #64748b;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -1989,6 +2010,14 @@ input:checked + .toggle-bg {
 .group:focus .group-focus\:ring-white {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
+}
+
+:is(.dark .dark\:block) {
+  display: block;
+}
+
+:is(.dark .dark\:hidden) {
+  display: none;
 }
 
 :is(.dark .dark\:divide-gray-600) > :not([hidden]) ~ :not([hidden]) {

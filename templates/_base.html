@@ -1,16 +1,46 @@
 {% load compress %} {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html id="darkModeSwitchSelector" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E Commerce</title>
 
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
     {% compress css %}
     <link rel="stylesheet" href="{% static 'src/output.css' %}" />
     {% endcompress %}
+
+    <script>
+      let themeSwitchButton;
+      const tempTimeOut = setTimeout(getBtn, 200);
+      const pageItself = document.getElementById("darkModeSwitchSelector");
+
+      function getBtn() {
+        themeSwitchButton = document.getElementById("themeSwitchButton");
+        clearTimeout(tempTimeOut);
+      }
+
+      function toggleTheme() {
+        pageItself.classList.toggle("dark");
+        if (!pageItself.classList.contains("dark")) {
+          themeSwitchButton.innerHTML = `<span class="material-symbols-outlined">
+      dark_mode
+      </span>`;
+        } else {
+          themeSwitchButton.innerHTML = `<span class="material-symbols-outlined">
+              light_mode
+              </span>`;
+        }
+      }
+    </script>
   </head>
 
   <body class="bg-green-50">
@@ -22,5 +52,16 @@
 
     <!-- Flowbite SRC file-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+    <!-- Dark Mode Switch-->
+    <div class="fixed top-0 right-0">
+      <button
+        id="themeSwitchButton"
+        class="text-gray-900 dark:text-gray-200"
+        onclick="toggleTheme()"
+      >
+        <span class="material-symbols-outlined"> dark_mode </span>
+      </button>
+    </div>
   </body>
 </html>
