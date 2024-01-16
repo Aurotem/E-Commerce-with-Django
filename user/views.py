@@ -3,5 +3,5 @@ from .forms import User
 
 # Create your views here.
 def register(request):
-    form = User
+    form = User()
     return render(request,'register.html',{'form':form});
