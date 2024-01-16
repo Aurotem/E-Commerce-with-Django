@@ -4,7 +4,7 @@ import requests
 
 
 def index(request):
-    response = requests.get('https://api.escuelajs.co/api/v1/products')
+    response = requests.get('https://fakestoreapi.com/products')
     data = response.json()
     context = {
         'products':data

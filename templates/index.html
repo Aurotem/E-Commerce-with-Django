@@ -2,6 +2,8 @@
 
 {% block content %}
 {%include 'partials/_highlights.html'%}
+
+<div class="allProducts grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
 {% include 'partials/_products.html' with products=products%}
-  <h1 class="text-3xl text-green-800">{{data}}</h1>
+</div>
 {% endblock content %}
