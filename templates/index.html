@@ -2,5 +2,6 @@
 
 {% block content %}
 {%include 'partials/_highlights.html'%}
+{% include 'partials/_products.html' with products=products%}
   <h1 class="text-3xl text-green-800">{{data}}</h1>
 {% endblock content %}
