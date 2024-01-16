@@ -23,6 +23,9 @@
       const tempTimeOut = setTimeout(getBtn, 200);
       const pageItself = document.getElementById("darkModeSwitchSelector");
 
+      localStorage.getItem("theme") &&
+        pageItself.classList.add(localStorage.getItem("theme"));
+
       function getBtn() {
         themeSwitchButton = document.getElementById("themeSwitchButton");
         clearTimeout(tempTimeOut);
@@ -30,11 +33,13 @@
 
       function toggleTheme() {
         pageItself.classList.toggle("dark");
+        localStorage.setItem("theme", "");
         if (!pageItself.classList.contains("dark")) {
           themeSwitchButton.innerHTML = `<span class="material-symbols-outlined">
       dark_mode
       </span>`;
         } else {
+          localStorage.setItem("theme", "dark");
           themeSwitchButton.innerHTML = `<span class="material-symbols-outlined">
               light_mode
               </span>`;
