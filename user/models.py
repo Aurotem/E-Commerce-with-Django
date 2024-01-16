@@ -5,8 +5,8 @@ from django.contrib.auth.models import (
 
 # Create your models here.
 class User(AbstractBaseUser):
-    name = models.CharField()
-    last_name = models.CharField()
+    name = models.CharField(max_length=12)
+    last_name = models.CharField(max_length=15)
     email = models.EmailField(
         verbose_name='email address',
         max_length=255,
