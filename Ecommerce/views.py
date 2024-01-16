@@ -1,10 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.shortcuts import render
-import json
-import urllib.request
+import requests
 
 
 
 def index(request):
-    return render(request, 'index.html')
+    response = requests.get('https://api.escuelajs.co/api/v1/products')
+    data = response.json()  # Assuming the API returns JSON data
+    context = {
+        'data':data
+    }
+    return render(request, 'index.html',context)
