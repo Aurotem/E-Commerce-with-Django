@@ -1,19 +1,21 @@
 {%for product in products%}
 <div
   id="{{product.id}}"
-  class="w-80 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+  class="w-80 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
 >
-  <div class="p-8 rounded-t-lg h-44 w-3/4 size-auto my-auto">
+  <div class="p-1 h-44 w-full size-auto my-auto">
     <a href="#" class="h-full w-auto">
-      <img class="h-full w-auto" src="{{product.image}}" alt="product image" />
+      <img
+        class="h-full w-auto rounded"
+        src="{{product.image}}"
+        alt="product image"
+      />
     </a>
   </div>
 
-  <div class="px-5 pb-5">
+  <div class="px-3 pb-3">
     <a href="#">
-      <h5
-        class=" tracking-tight text-gray-900 dark:text-white"
-      >
+      <h5 class="tracking-tight text-gray-900 dark:text-white">
         {{product.title|truncatechars:'25'}}
       </h5>
     </a>
