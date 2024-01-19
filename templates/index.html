@@ -3,6 +3,11 @@
 {% block content %}
 {%include 'partials/_highlights.html'%}
 
+<h1>Beğenebileceğiniz ürünler</h1>
+<div class='flex overflow-y-scroll'>
+
+    {% include 'partials/_products_scroll.html' with products=products%}
+</div>
 <div class="allProducts grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
 {% include 'partials/_products.html' with products=products%}
 </div>
