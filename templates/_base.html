@@ -17,6 +17,7 @@
         theme: {
           extend: {},
         },
+        plugins: [require("flowbite/plugin")],
       };
     </script>
 
@@ -63,7 +64,6 @@
       {% block content %} {% endblock content %}
     </div>
 
-
     <!-- Dark Mode Switch-->
     <div class="fixed top-0 right-0">
       <button
@@ -74,5 +74,8 @@
         <span class="material-symbols-outlined"> dark_mode </span>
       </button>
     </div>
+
+    <!--FLOWBITE-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
   </body>
 </html>
