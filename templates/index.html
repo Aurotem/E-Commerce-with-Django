@@ -3,11 +3,24 @@
 {% block content %}
 {%include 'partials/_highlights.html'%}
 
-<h1 class="text-gray-800 dark:text-gray-100 text-3xl my-2">Beğenebileceğiniz ürünler</h1>
-<div class='flex overflow-y-hidden overflow-x-scroll gap-3'>
-    {% include 'partials/_products_scroll.html' with products=products%}
+<h1 class="text-gray-800 dark:text-gray-100 text-3xl mb-2 mt-20">Beğenebileceğiniz ürünler</h1>
+<div class='flex overflow-y-hidden overflow-x-scroll gap-3 mb-4'>
+    {% include 'partials/_products_scroll.html' with products=products category=''%}
 </div>
-<div class="allProducts grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
+
+<h1 class="text-gray-800 dark:text-gray-100 text-3xl mb-2 mt-20">Giyim / Tarz:</h1>
+<div class='flex  overflow-y-hidden overflow-x-scroll gap-3 mb-4'>
+    {% include 'partials/_products_scroll.html' with products=products category='clothing'%}
+</div>
+
+<h1 class="text-gray-800 dark:text-gray-100 text-3xl mb-2 mt-20">Teknoloji:</h1>
+<div class='flex overflow-y-hidden overflow-x-scroll gap-3 mb-4'>
+    {% include 'partials/_products_scroll.html' with products=products category='electronics'%}
+</div>
+
+
+
+{% comment %} <div class="allProducts grid grid-cols-1 md:grid-cols-3 items-center justify-items-center">
 {% include 'partials/_products.html' with products=products%}
-</div>
+</div> {% endcomment %}
 {% endblock content %}

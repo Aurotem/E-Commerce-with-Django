@@ -26,6 +26,9 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
 
+    <!--CSS in Static File-->
+    {% static '/styles.css'%}
+
     <script>
       let themeSwitchButton;
       const tempTimeOut = setTimeout(getBtn, 200);
@@ -73,6 +76,8 @@
         <span class="material-symbols-outlined"> dark_mode </span>
       </button>
     </div>
+
+    {%include 'partials/_footer.html'%}
 
     <!--FLOWBITE-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
