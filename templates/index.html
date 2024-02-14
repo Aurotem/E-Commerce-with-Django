@@ -3,17 +3,17 @@
 {% block content %}
 {%include 'partials/_highlights.html'%}
 
-<h1 class="text-gray-800 dark:text-gray-100 text-3xl mb-2 mt-20">Beğenebileceğiniz ürünler</h1>
+<h1 class="text-gray-800 dark:text-gray-100 text-3xl mb-2 mt-20"> Beğenebileceğiniz ürünler</h1>
 <div class='flex overflow-y-hidden overflow-x-scroll gap-3 mb-4'>
     {% include 'partials/_products_scroll.html' with products=products category=''%}
 </div>
 
-<h1 class="text-gray-800 dark:text-gray-100 text-3xl mb-2 mt-20">Giyim / Tarz:</h1>
-<div class='flex  overflow-y-hidden overflow-x-scroll gap-3 mb-4'>
+<h1 class="text-gray-800 dark:text-gray-100 text-3xl mb-2 mt-20"> Giyim / Tarz:</h1>
+<div class='flex overflow-y-hidden overflow-x-scroll gap-3 mb-4'>
     {% include 'partials/_products_scroll.html' with products=products category='clothing'%}
 </div>
 
-<h1 class="text-gray-800 dark:text-gray-100 text-3xl mb-2 mt-20">Teknoloji:</h1>
+<h1 class="text-gray-800 dark:text-gray-100 text-3xl mb-2 mt-20"> Teknoloji:</h1>
 <div class='flex overflow-y-hidden overflow-x-scroll gap-3 mb-4'>
     {% include 'partials/_products_scroll.html' with products=products category='electronics'%}
 </div>
